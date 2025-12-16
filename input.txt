@@ -1,0 +1,16 @@
+abcdef
+-jhkfl
+9www
+ss_sadia
+f1weregy
+sadia sharmin
+no-way
+ee6vsttf76l45
+
+int main (){
+    int a,b;
+    a = 10;
+    return 0;
+}
+
+
