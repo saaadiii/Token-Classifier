@@ -2,12 +2,12 @@
 #include <fstream>
 using namespace std;
 
-// check if keyword
+
 bool isKeyword(string s) {
     return (s == "int" || s == "float" || s == "char" || s == "return" || s == "void");
 }
 
-// check if identifier
+
 bool isIdentifier(string s) {
     if (!((s[0] >= 'a' && s[0] <= 'z') ||(s[0] >= 'A' && s[0] <= 'Z') ||s[0] == '_'))
         return false;
@@ -20,7 +20,7 @@ bool isIdentifier(string s) {
     return true;
 }
 
-// punctuation check
+
 bool isPunctuation(char c) {
     return (c == ';' || c == ',' || c == '(' || c == ')' ||c == '{' || c == '}' || c == '=');
 }
@@ -32,13 +32,13 @@ int main() {
 
     while (file.get(c)) {
 
-        // build word
+        
         if ((c >= 'a' && c <= 'z') ||(c >= 'A' && c <= 'Z') ||(c >= '0' && c <= '9') ||c == '_')
         {
             word = word+c;
         }
         else {
-            // if word is complete, classify it
+            
             if (word != "") {
                 if (isKeyword(word))
                     cout << word << " -> KEYWORD\n";
@@ -50,14 +50,14 @@ int main() {
                 word = "";
             }
 
-            // check punctuation
+            
             if (isPunctuation(c)) {
                 cout << c << " -> PUNCTUATION\n";
             }
         }
     }
 
-    // last word if file ends
+    
     if (word != "") {
         if (isKeyword(word))
             cout << word << " -> KEYWORD\n";
@@ -69,3 +69,4 @@ int main() {
 
     return 0;
 }
+
